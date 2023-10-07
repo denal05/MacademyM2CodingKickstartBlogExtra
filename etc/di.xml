@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Denal05\MacademyM2CodingKickstartBlog\Observer\LogPostDetailView">
+        <plugin name="denal05_macademym2codingkickstartblogextra_add_data_to_post_detail_observer"
+                type="Denal05\MacademyM2CodingKickstartBlogExtra\Plugin\AddDataToPostDetailObserver"/>
+        <plugin name="denal05_macademym2codingkickstartblogextra_prevent_post_detail_logger"
+                type="Denal05\MacademyM2CodingKickstartBlogExtra\Plugin\PreventPostDetailLogger"
+                disabled="true"/>
+    </type>
+    <type name="Denal05\MacademyM2CodingKickstartBlog\Controller\Post\Detail">
+        <plugin name="denal05_macademym2codingkickstartblogextra_alternate_post_detail_template"
+                type="Denal05\MacademyM2CodingKickstartBlogExtra\Plugin\AlternatePostDetailTemplate"
+                disabled="true"/>
+    </type>
+    <!--preference for="Denal05\MacademyM2CodingKickstartBlog\Controller\Post\Detail"
+                type="Denal05\MacademyM2CodingKickstartBlogExtra\Controller\Post\Detail"/-->
+</config>

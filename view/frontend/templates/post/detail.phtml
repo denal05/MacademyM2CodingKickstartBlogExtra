@@ -1,0 +1,13 @@
+<?php
+/** @var Magento\Framework\Escaper $escaper */
+/** @var Magento\Framework\View\Element\Template $block */
+/** @var Denal05\MacademyM2CodingKickstartBlog\ViewModel\Post $postViewModel */
+/** @var \Magento\Framework\Stdlib\DateTime\TimezoneInterface $timezone */
+$postViewModel = $block->getData('post_viewmodel');
+$post = $postViewModel->getDetail();
+?>
+<div class="blog-post-detail">
+    <h1><?= $escaper->escapeHtml($post->getTitle()) ?></h1>
+    <p><em><?= __('Current date: %1', $timezone->date()) ?></em></p>
+    <p><?= $escaper->escapeHtml($post->getContent(), ['em', 'p', 'strong']) ?></p>
+</div>
